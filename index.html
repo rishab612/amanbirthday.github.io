@@ -64,54 +64,118 @@
       <h3 class="amt-raise">₹ 0 / ₹ 26,999</h3>
       <h3 class="amt-raise">+ ₹2 GST</h3>
       <form>
-        <a href="https://payments.cashfree.com/forms/amankumar" target="_parent">
-          <div class="button-container" style="background: #181212">
-            <div>
-              <img src="https://cashfree-checkoutcartimages-prod.cashfree.com/amanV8do93pj1efg_prod.jpeg" alt="logo" class="logo-container">
+      <a href="https://payments.cashfree.com/forms/amankumar" target="_parent">
+        <div class="button-container">
+          <div>
+            <img src="https://cashfree-checkoutcartimages-prod.cashfree.com/amanV8do93pj1efg_prod.jpeg" alt="logo" class="logo-container">
+          </div>
+          <div class="text-container">
+            <div class="main-text">
+              Paise Dedo Sahab
             </div>
-            <div class="text-container">
-              <div style="font-family: Garamond; color: #fff; margin-bottom: 5px; font-size: 14px;">
-                Paise Dedo Sahab
-              </div>
-              <div style="font-family: Garamond; color: #fff; font-size: 10px;">
-                  <span>Powered By Cashfree</span>
-                  <img src="https://cashfreelogo.cashfree.com/cashfreepayments/logosvgs/Group_4355.svg" alt="logo" class="seconday-logo-container">
-              </div>
+            <div class="powered-text">
+              <span>Powered By Cashfree</span>
+              <img src="https://cashfreelogo.cashfree.com/cashfreepayments/logosvgs/Group_4355.svg" alt="logo" class="seconday-logo-container">
             </div>
           </div>
-        </a>
-       <style>
-        .button-container{
-            border: 1px solid black;
-            border-radius: 15px;
-            display: flex;
-            padding: 10px;
-            width: fit-content;
-            cursor: pointer;
-            margin-left: 180px;
+        </div>
+      </a>
+    
+      <style>
+        .button-container {
+          border: 1px solid black;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          padding: 10px 15px;
+          max-width: 200px;
+          background: #181212;
+          cursor: pointer;
+          flex-wrap: wrap;
+          justify-content: center;
+          box-sizing: border-box;
+          margin: 20px auto;
         }
-        .text-container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: 10px;
-            justify-content: center;
-            margin-right: 10px;
+    
+        .text-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          text-align: center;
         }
-        .logo-container{
-            width: 40px;
-            height: 40px;
+    
+        .main-text {
+          font-family: Garamond;
+          color: #fff;
+          margin-bottom: 5px;
+          font-size: 14px;
         }
-        .seconday-logo-container{
+    
+        .powered-text {
+          font-family: Garamond;
+          color: #fff;
+          font-size: 10px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+    
+        .logo-container {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+    
+        .seconday-logo-container {
           width: 16px;
           height: 16px;
           vertical-align: middle;
         }
-        a{
-          text-decoration:none;
+    
+        a {
+          text-decoration: none;
+        }
+    
+        @media (max-width: 600px) {
+          .button-container {
+            flex-direction: row;
+            padding: 10px;
+          }
+    
+          .main-text {
+            font-size: 12px;
+          }
+    
+          .powered-text {
+            font-size: 9px;
+          }
+    
+          .logo-container {
+            width: 35px;
+            height: 35px;
+          }
+    
+          .seconday-logo-container {
+            width: 14px;
+            height: 14px;
+          }
+        }
+    
+        @media (max-width: 400px) {
+          .button-container {
+            flex-direction: column;
+            gap: 10px;
+          }
+    
+          .text-container {
+            margin-left: 0;
+          }
         }
       </style>
-      </form>
+    </form>
     </section>
   </div>
 
