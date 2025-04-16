@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fund Raiser For Aman's Birthday Gift</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script> <!-- Confetti CDN -->
+</head>
+<body>
+
+  <!-- Sparkle Container (For possible future sparkle effects) -->
+  <div class="sparkle-container" id="sparkle-container"></div>
+    <!-- Countdown Timer Section -->
+    <div class="countdown-section">
+        <h2>Countdown to Aman's Birthday</h2>
+        <div id="countdown">
+          <div class="countdown-block">
+            <span id="days" class="time-block"></span>
+            <p>Days</p>
+          </div>
+          <div class="countdown-block">
+            <span id="hours" class="time-block"></span>
+            <p>Hours</p>
+          </div>
+          <div class="countdown-block">
+            <span id="minutes" class="time-block"></span>
+            <p>Minutes</p>
+          </div>
+          <div class="countdown-block">
+            <span id="seconds" class="time-block"></span>
+            <p>Seconds</p>
+          </div>
+        </div>
+      </div>
+    
+
+  <!-- Main Content Section -->
+  <div class="main">
+    
+    <h1>Fund Raiser for Aman's Birthday Gift 🎁</h1>
+
+    <!-- Candle Emoji Container -->
+    <div class="candle-container">
+      <img class="candle-emoji" src="candle-img.png" alt="candle-img">
+      <img class="profile-img" src="aman.jpeg" alt="Aman">
+      <img class="candle-emoji" src="candle-img.png" alt="candle-img">
+    </div>
+
+    <!-- Extra content section between images and amount -->
+    <div class="middle-text">
+      <h2>Happy Birthday Aman Singh Kumar In Advance</h2>
+      <hr style="margin: 10px 0;">
+      <section>
+        <p style="text-decoration: none;"><i>मैं अमन कुमार सिंह ये कहना चाहता हू कि मुजी एक ड्रोन चाहियर है पर मैं लाई नही सकता तो मुझे आप सब लोग मिलकर ड्रोन गिफ्ट करदो अपने अपने हिसाब से मुझे थोड़े थोड़े पैसे देदो</i></p>
+        <p style="text-decoration: none;"><i>I Aman Kumar Singh want to say that I need a drone but I cannot buy it, so all of you please come together and gift me a drone, contribute little by little as per your capacity.</i></p>
+      </section>
+    </div>
+
+    <img class="drone-image" src="drone-img.png" alt="Drone Image">
+
+    <section>
+      <h3 class="amt-raise">₹ 0 / ₹ 26,999</h3>
+      <h3 class="amt-raise">+ ₹2 GST</h3>
+      <button class="btn-dnt"><i class="fas fa-heart"></i> Paise Dedo Sahab</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Countdown Script
+    function updateCountdown() {
+      const targetDate = new Date("April 22, 2025 00:00:00").getTime();  // Updated to April 22, 2025
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      // Calculate days, hours, minutes, seconds, and milliseconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const milliseconds = distance % 1000;
+
+      // Display the result
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+      document.getElementById("milliseconds").innerHTML = milliseconds;
+
+      // If the countdown is finished, display "EXPIRED"
+      if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }
+
+    // Update countdown every 1 millisecond
+    const interval = setInterval(updateCountdown, 1);
+  </script>
+</body>
+</html>

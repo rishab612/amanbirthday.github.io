@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+    animation: fadeInBody 1s ease;
+    overflow-x: hidden;
+  }
+  
+  @keyframes fadeInBody {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Sparkle Container (This will be used for any future sparkle effects) */
+  .sparkle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  /* Main Section Style */
+  .main {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    animation: floatUp 1s ease;
+    position: relative;
+  }
+  
+  @keyframes floatUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .main h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  /* Candle Emoji Container */
+  .candle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .candle-emoji {
+    height: 150px;
+    margin: 0 10px;
+  }
+  
+  .profile-img {
+    width: 190px;
+    border: 5px solid #f8b500;
+    border-radius: 15px;
+    animation: popIn 1s ease;
+  }
+  
+  .drone-image {
+    width: 220px;
+    margin: 20px 0;
+    animation: fly 4s ease-in-out infinite;
+  }
+  
+  @keyframes fly {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  
+  @keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .middle-text {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .amt-raise {
+    font-size: 2rem;
+    color: #27ae60;
+    margin: 15px 0;
+  }
+  
+  .btn-dnt {
+    background-color: #f8b500;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .btn-dnt:hover {
+    background-color: #d79400;
+    transform: scale(1.05);
+  }
+  
+  /* Content Section Style */
+  .content-section {
+    margin-top: 30px;
+    background-color: #fffdf2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    animation: fadeInContent 1.5s ease;
+    max-width: 600px;
+  }
+  
+  @keyframes fadeInContent {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .content-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .content-section p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .countdown-section {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .countdown-block {
+    display: inline-block;
+    margin: 10px;
+    background-color: #ffcc00;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
+    height: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .time-block {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  .countdown-block p {
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff5f5;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .content-section {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-section h2 {
+    color: #333;
+  }
+  
+  .content-section p {
+    color: #ffffff;
+  }
+  
+  #countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: no-wrap; /* Ensure no wrapping */
+    overflow-x: auto; /* Allows horizontal scrolling if content exceeds width */
+    margin-top: 20px;
+  }
+  
+  #countdown .countdown-block {
+    margin: 10px;
+    background: #ffcc00;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  #countdown .countdown-block:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Horizontal responsiveness for small devices */
+  @media (max-width: 768px) {
+    #countdown {
+      justify-content: flex-start; /* Align to the left */
+      overflow-x: scroll; /* Scroll horizontally on smaller screens */
+    }
+  
+    .countdown-block {
+      width: 80px;  /* Smaller width for medium screens */
+      height: 100px;  /* Adjust height */
+    }
+  
+    .time-block {
+      font-size: 25px;  /* Adjust font size for medium screens */
+    }
+  
+    .countdown-block p {
+      font-size: 12px;  /* Smaller text for labels */
+    }
+  
+    h2 {
+      font-size: 20px;  /* Adjust heading size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #countdown {
+      justify-content: flex-start; /* Ensure left alignment on small screens */
+      overflow-x: auto;  /* Horizontal scrolling */
+    }
+  
+    .countdown-block {
+      width: 70px;  /* Reduce width for small screens */
+      height: 90px;  /* Adjust height accordingly */
+    }
+  
+    .time-block {
+      font-size: 20px;  /* Smaller font size */
+    }
+  
+    .countdown-block p {
+      font-size: 10px;  /* Reduce font size of labels */
+    }
+  
+    h2 {
+      font-size: 18px;  /* Smaller heading font */
+    }
+  }
+  
